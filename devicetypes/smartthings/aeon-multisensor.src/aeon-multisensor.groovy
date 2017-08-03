@@ -9,10 +9,10 @@
  *  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed
  *  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
  *  for the specific language governing permissions and limitations under the License.
- *
+ *  
  */
 metadata {
-	definition (name: "Aeon Multisensor", namespace: "smartthings", author: "SmartThings") {
+	definition (name: "My Aeon Multisensor", namespace: "Drwho099", author: "SmartThings") {
 		capability "Motion Sensor"
 		capability "Temperature Measurement"
 		capability "Relative Humidity Measurement"
@@ -89,7 +89,7 @@ metadata {
 			state "configure", label:'', action:"configuration.configure", icon:"st.secondary.configure"
 		}
 
-		main(["motion", "temperature", "humidity", "illuminance"])
+		main(["motion", "temperature", "humidity", "illuminance"])		// GRH - swapped motion/temp order
 		details(["motion", "temperature", "humidity", "illuminance", "battery", "configure"])
 	}
 }
